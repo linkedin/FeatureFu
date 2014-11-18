@@ -1,0 +1,45 @@
+{
+  "name": "featurefun",
+  "group": "com.linkedin.@spec.name@",
+  "version": "0.0.1",
+  "scmUrl": "git@gitli.corp.linkedin.com:FeatureFun/featurefun.git",
+  "owners": [
+    "litang"
+  ],
+  "comment": "",
+  "description": "fun feature engineering projects",
+  "watchers": [],
+  "build": {
+    "commands": {
+      "test": "ligradle check",
+      "snapshot": "ligradle -Psnapshot=true build",
+      "build": "ligradle -Prelease=true -PallArtifacts build"
+    },
+    "type": "gradle",
+    "versions": {
+      "rum": "3.*.*",
+      "java": "1.6",
+      "scala": "2.10.4",
+      "gradle": "2.1"
+    }
+  },
+  "review": {
+    "wcTest": true
+  }
+,
+  "deploy": {},
+  "archive": {
+    "artifacts": {},
+    "repo_name": "SNA"
+  },
+  "dependencyResolution": {},
+  "external": {
+    "testng": "org.testng:testng:6.4"
+  },
+  "product": {},
+  "trunkDev": {
+    "autoRevert": true
+  },
+  "extSCM": {}
+}
+
