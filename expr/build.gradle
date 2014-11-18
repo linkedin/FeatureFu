@@ -1,15 +1,6 @@
-apply plugin: 'java'
+apply plugin: 'li-java'
 apply plugin: 'idea'
-
-group = 'com.linkedin.featurefun'
-version = '1.0'
-
-description = """expr"""
-
-sourceCompatibility = 1.6
-targetCompatibility = 1.6
-
-
+apply plugin: 'li-test'
 
 repositories {
      mavenLocal()
@@ -18,3 +9,5 @@ repositories {
 dependencies {
      compile spec.external.testng
 }
+
+classification="library"
