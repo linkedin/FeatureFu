@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+group = 'com.linkedin.featurefun'
+version = '1.0'
+
+description = """expr"""
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+
+
+repositories {
+     mavenLocal()
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+     compile spec.external.testng
+}
