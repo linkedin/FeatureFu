@@ -16,7 +16,7 @@ package com.linkedin.featurefun.expr;
  * More s-expression parser implementation in different languages
  *   http://rosettacode.org/wiki/S-Expressions
  *
- * Created by Leo Tang <litang@linkedin.com> on 11/13/14.
+ * Author: Leo Tang <litang@linkedin.com>
  */
 public interface Expr {
     /**

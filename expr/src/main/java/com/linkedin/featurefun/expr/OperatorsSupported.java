@@ -7,7 +7,7 @@ import java.util.Set;
  * Singleton class to hold the <Name,Operator> map for supported operators
  * Cannot put this logic inside Operator class as its static data member may not be instantiated yet by the time.
  *
- * Created by Leo Tang <litang@linkedin.com> on 11/13/14.
+ * Author: Leo Tang <litang@linkedin.com>
  */
 public class OperatorsSupported extends HashMap<String, Operator>{
     /**
@@ -50,7 +50,7 @@ public class OperatorsSupported extends HashMap<String, Operator>{
         registerOperator(Operator.EXP);           // exp
         registerOperator(Operator.SIGMOID);       // sigmoid
         registerOperator(Operator.RAND);          // rand   return [0,1]
-        registerOperator(Operator.RANDINT);       // rand-int a,b return [a,b]
+        registerOperator(Operator.RANDIN);       // rand-in a,b return [a,b]
         registerOperator(Operator.FLOOR);         // floor
         registerOperator(Operator.CEIL);          // ceil
         registerOperator(Operator.ROUND);         // round

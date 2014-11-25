@@ -7,7 +7,7 @@ import java.util.*;
  * Operator contains the actually computation logic
  * Can be easily extended to support new operators
  *
- * Created by Leo Tang <litang@linkedin.com> on 11/13/14.
+ * Author: Leo Tang <litang@linkedin.com>
  */
 public abstract class Operator {
 
@@ -89,15 +89,12 @@ public abstract class Operator {
         return this.getSymbol();
     }
 
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //
-    //  Implementations of an array of operators, add yours below and register it in class OperatorsSupported, just that simple
-    //      Most of the implementations below are self explanatory, just to mention boolean is represented by double too:
-    //       any double can be regarded as boolean, with implicit converter: double -> boolean:  0.0 is false, otherwise true
-    //       Also 'if' is used as a ternary operator (if x a b) == x ? a : b , with x, a, b can be any expressions
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
+    /**
+     *  Implementations of an array of operators, add yours below and register it in class OperatorsSupported, just that simple
+     *    Most of the implementations below are self explanatory, just to mention boolean is represented by double too:
+     *       any double can be regarded as boolean, with implicit converter: double -> boolean:  0.0 is false, otherwise true
+     *    Also 'if' is defined as a ternary operator (if x a b), equivalent to x ? a : b , where x, a, b can be any expressions
+     */
     public static final Operator EQ = new Operator() {
 
         public int numberOfOperands(){
@@ -453,34 +450,34 @@ public abstract class Operator {
 
 
     public static final Operator RAND = new Operator() {
-
-        public int numberOfOperands(){
+        private Random generator = new Random(System.currentTimeMillis());
+        public int numberOfOperands() {
             return 0;
         }
 
-        public double calculate(List<Expr> operands){
-            return  Math.random();
+        public double calculate(List<Expr> operands) {
+            return generator.nextDouble();
         }
-        public String getSymbol(){
+
+        public String getSymbol() {
             return "rand";
         }
     };
 
-
-    public static final Operator RANDINT = new Operator() {
-
-        public int numberOfOperands(){
+    public static final Operator RANDIN = new Operator() {
+        private Random generator = new Random(System.currentTimeMillis());
+        public int numberOfOperands() {
             return 2;
         }
 
-        public double calculate(List<Expr> operands){
+        public double calculate(List<Expr> operands) {
             double a = operands.get(0).evaluate();
             double b = operands.get(1).evaluate() - a;
-            return  a + b * Math.random();
+            return a + b * generator.nextDouble();
         }
 
-        public String getSymbol(){
-            return "rand-int";
+        public String getSymbol() {
+            return "rand-in";
         }
     };
 

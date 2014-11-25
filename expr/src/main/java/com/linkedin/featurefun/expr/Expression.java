@@ -6,7 +6,7 @@ import java.util.List;
  *  Recursively build an expression from s-expression style string input
  *  register variables within the expression along the way
  *
- *  Created by Leo Tang <litang@linkedin.com> on 11/13/14.
+ * Author: Leo Tang <litang@linkedin.com>
  */
 public class Expression implements Expr {
     private Operator operator;

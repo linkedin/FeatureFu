@@ -3,6 +3,7 @@ package com.linkedin.featurefun.expr;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+
 /**
  *
  *
@@ -12,17 +13,13 @@ import java.util.concurrent.ConcurrentHashMap;
  *
  * If users don't want two expressions to share variables, they can create and use different VariableRegistry for them
  *
- * Created by Leo Tang <litang@linkedin.com> on 11/13/14.
+ * Author: Leo Tang <litang@linkedin.com>
  */
-public class VariableRegistry extends ConcurrentHashMap<String, Variable>{
+public class VariableRegistry extends ConcurrentHashMap<String, Variable> {
     /**
-     * Searches for a {@link Variable} with the given name.
-     * <p>
-     * If the variable does not exist <tt>null</tt>  will be returned
-     * </p>
-     *
-     * @param name the name of the variable to search
-     * @return the variable with the given name or <tt>null</tt> if no such variable was found
+     * Get variable object by string name
+     * @param name variable name parsed from expression, can contain any character except white space and parenthesis "()"
+     * @return  variable object found
      */
     public Variable findVariable(String name) {
         if (this.containsKey(name)) {
@@ -32,35 +29,34 @@ public class VariableRegistry extends ConcurrentHashMap<String, Variable>{
         return null;
     }
 
+
     /**
-     * Searches for or creates a variable with the given name.
-     * <p>If no variable with the given name is found, a new variable is created in this Registry</p>
-     *
-     * @param name the variable to look for
-     * @return a variable with the given name
+     * Register variable by name, try find it first, if not found, create new one and register
+     * @param name variable name
+     * @return  variable object found or created
      */
     public Variable registerVariable(String name) {
-        if (this.containsKey(name)) {
-            return this.get(name);
-        }
 
-        Variable result = new Variable(name);
-        this.put(name, result);
+        Variable result = findVariable(name);
+
+        if(result==null) {
+            result = new Variable(name);
+            this.put(name, result);
+        }
 
         return result;
     }
-
 
     /***
      * Refresh values for all the variables registered, based on given <varName,value> map
      * @param varMap
      */
-    public void refresh(Map<String,Double> varMap){
-        for (Map.Entry<String, Variable> entry : this.entrySet()){
-            if(varMap.containsKey(entry.getKey())){
-               entry.getValue().setValue(varMap.get(entry.getKey()).doubleValue());
-            }else {
-                entry.getValue().setValue(0d);//reset value to zero, better than reusing previous value
+    public void refresh(Map<String, Double> varMap) {
+        for (Map.Entry<String, Variable> entry : this.entrySet()) {
+            if (varMap.containsKey(entry.getKey())) {
+                entry.getValue().setValue(varMap.get(entry.getKey()).doubleValue());
+            } else {
+                entry.getValue().setValue(0d); //reset value to zero, better than reusing previous value
             }
         }
     }

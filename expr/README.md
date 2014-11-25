@@ -51,6 +51,6 @@ expr is available under:
     <dependency>
       <groupId>com.linkedin.featurefun</groupId>
       <artifactId>expr</artifactId>
-      <version>1.0</version>
+      <version>0.0.3</version>
     </dependency>
 

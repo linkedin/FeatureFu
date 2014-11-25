@@ -4,7 +4,7 @@ package com.linkedin.featurefun.expr;
  *
  * Constant just has a value in double type, as other numeric types can be converted to double (not verse visa)
  *
- * Created by Leo Tang <litang@linkedin.com> on 11/13/14.
+ * Author: Leo Tang <litang@linkedin.com>
  */
 public class Constant extends Atom {
     public Constant(double v){

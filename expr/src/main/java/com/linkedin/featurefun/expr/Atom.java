@@ -7,7 +7,7 @@ package com.linkedin.featurefun.expr;
  *
  * Atom has a value, possibly a name (if it's variable), expression has a operator, and one or more operands
  *
- * Created by Leo Tang <litang@linkedin.com> on 11/13/14.
+ * Author: Leo Tang <litang@linkedin.com>
  * */
 public abstract class Atom implements Expr {
     protected double value = 0d;

@@ -4,7 +4,7 @@ package com.linkedin.featurefun.expr;
  *
  * Variable is a <name,value> pair, can be assigned different values many times to re-evaluate the expression it belongs to
  *
- * Created by Leo Tang <litang@linkedin.com> on 11/13/14.
+ * Author: Leo Tang <litang@linkedin.com>
  */
 public class Variable extends Atom {
     private String name; //value is already defined in Atom

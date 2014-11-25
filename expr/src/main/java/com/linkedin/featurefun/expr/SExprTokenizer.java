@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
  * ported and modified from python code:
  *  http://www.nltk.org/_modules/nltk/tokenize/sexpr.html
  *
- *  Created by Leo Tang <litang@linkedin.com> on 11/13/14.
+ * Author: Leo Tang <litang@linkedin.com>
  */
 public class SExprTokenizer {
     public static final String open_paren = "(";
