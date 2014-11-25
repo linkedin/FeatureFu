@@ -80,6 +80,8 @@ public class Expression implements Expr {
 
     /**
      * Pretty print the expression in hierarchical tree format
+     * Reference: http://stackoverflow.com/questions/4965335/how-to-print-binary-tree-diagram/8948691#8948691
+     *
      * @param prefix  Indent for this node
      * @param isTail  Is it the last operand
      */

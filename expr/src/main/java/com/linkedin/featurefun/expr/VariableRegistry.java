@@ -13,6 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
  *
  * If users don't want two expressions to share variables, they can create and use different VariableRegistry for them
  *
+ *
  * Author: Leo Tang <litang@linkedin.com>
  */
 public class VariableRegistry extends ConcurrentHashMap<String, Variable> {

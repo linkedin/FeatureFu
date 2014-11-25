@@ -10,7 +10,7 @@ import java.util.MissingFormatArgumentException;
  *
  * Unit test for math expression parsing, evaluating and printing
  *
- * Created by Leo Tang <litang@linkedin.com> on 11/13/14.
+ * Author: Leo Tang <litang@linkedin.com>
  */
 public class ExprTest {
     @Test

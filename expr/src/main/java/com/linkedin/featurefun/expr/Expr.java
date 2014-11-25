@@ -13,8 +13,9 @@ package com.linkedin.featurefun.expr;
  *
  *                                       Operator -> dozens of Operator implementations
  *
- * More s-expression parser implementation in different languages
+ * Alternative s-expression parser implementations in different languages
  *   http://rosettacode.org/wiki/S-Expressions
+ *   https://github.com/scireum/parsii
  *
  * Author: Leo Tang <litang@linkedin.com>
  */
