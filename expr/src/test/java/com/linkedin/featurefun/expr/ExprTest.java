@@ -26,6 +26,8 @@ public class ExprTest {
 
         Assert.assertTrue(Expression.evaluate("(- 1)") == -1);
 
+        Assert.assertTrue(Expression.evaluate("(cos 1)") == Math.cos(1));
+
         double r = Expression.evaluate("(rand-in 5 10)");
         Assert.assertTrue(r >= 5 && r <= 10);
 

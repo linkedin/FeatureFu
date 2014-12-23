@@ -7,25 +7,25 @@ package com.linkedin.featurefun.expr;
  * Author: Leo Tang <litang@linkedin.com>
  */
 public class Variable extends Atom {
-    private String name; //value is already defined in Atom
+  private String _name; // value is already defined in Atom
 
-    protected Variable(String name) {
-        this.name = name;
-    }
+  protected Variable(String name) {
+    this._name = name;
+  }
 
-    public void setValue(double v){
-        value=v;
-    }
+  public void setValue(double v) {
+    _value = v;
+  }
 
-    public double getValue(){
-        return value;
-    }
+  public double getValue() {
+    return _value;
+  }
 
-    public String getName() {
-        return name;
-    }
+  public String getName() {
+    return _name;
+  }
 
-    public String toString(){
-        return name;
-    }
+  public String toString() {
+    return _name;
+  }
 }

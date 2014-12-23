@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
 /**
  * Simple s-expression tokenizer to return top level s-expressions found
  * Example:
@@ -19,64 +20,71 @@ import java.util.regex.Pattern;
  * Author: Leo Tang <litang@linkedin.com>
  */
 public class SExprTokenizer {
-    public static final String open_paren = "(";
-    public static final String close_paren = ")";
-    private static final String paren_regexp = "\\(|\\)";
-    private static final String whitespace_regexp = "\\s+";
+  public static final String OPEN_PAREN = "(";
+  public static final String CLOSE_PAREN = ")";
+  private static final String PAREN_REGEXP = "\\(|\\)";
+  private static final String WHITESPACE_REGEXP = "\\s+";
 
-    private static final Pattern pattern = Pattern.compile(paren_regexp);
+  private static final Pattern PATTERN = Pattern.compile(PAREN_REGEXP);
 
-    public static List<String> tokenize(String input){
-        List<String> result=new ArrayList<String>();
-        int pos = 0;
-        int depth = 0;
+  private SExprTokenizer() { }
 
-        input = input.trim();//leading and trailing whitespace omitted.
+  public static List<String> tokenize(String input) {
+    List<String> result = new ArrayList<String>();
+    int pos = 0;
+    int depth = 0;
 
-        Matcher matcher = pattern.matcher(input);
+    input = input.trim(); //leading and trailing whitespace omitted.
 
-        while(matcher.find()) {
+    Matcher matcher = PATTERN.matcher(input);
 
-            String paren = matcher.group();
-            int start =  matcher.start();
-            int end = matcher.end();
+    while (matcher.find()) {
 
-           if(depth==0){
-               String part = input.substring(pos, start).trim();
+      String paren = matcher.group();
+      int start = matcher.start();
+      int end = matcher.end();
 
-               if(!part.isEmpty())
-                   result.addAll(Arrays.asList(part.split(whitespace_regexp)));
+      if (depth == 0) {
+        String part = input.substring(pos, start).trim();
 
-               pos=start;
-           }
-            if(paren.equals(open_paren)){
-                depth +=1;
-            }
+        if (!part.isEmpty()) {
+          result.addAll(Arrays.asList(part.split(WHITESPACE_REGEXP)));
+        }
 
-            if(paren.equals(close_paren)){
-               if(depth==0) throw new InputMismatchException("Unmatched close parenthesis at position "+ matcher.start() + " of input "+input);
+        pos = start;
+      }
+      if (paren.equals(OPEN_PAREN)) {
+        depth += 1;
+      }
 
-                depth = Math.max(0, depth - 1);
+      if (paren.equals(CLOSE_PAREN)) {
+        if (depth == 0) {
+          throw new InputMismatchException(
+              "Unmatched close parenthesis at position " + matcher.start() + " of input " + input);
+        }
 
-                if(depth==0){
-                    result.add(input.substring(pos,end));
-                    pos = end;
-                }
-            }
+        depth = Math.max(0, depth - 1);
+
+        if (depth == 0) {
+          result.add(input.substring(pos, end));
+          pos = end;
+        }
+      }
     }
 
-    if(depth>0){
-            throw new InputMismatchException("Unmatched close parenthesis at position "+ pos + " of input "+input);
+    if (depth > 0) {
+      throw new InputMismatchException("Unmatched close parenthesis at position " + pos + " of input " + input);
     }
 
-    if (pos < input.length()){
+    if (pos < input.length()) {
 
-        String part = input.substring(pos).trim();
+      String part = input.substring(pos).trim();
 
-        if(!part.isEmpty())
-            result.addAll(Arrays.asList(part.split(whitespace_regexp)));
+      if (!part.isEmpty()) {
+        result.addAll(Arrays.asList(part.split(WHITESPACE_REGEXP)));
+      }
     }
 
-       return result;
-    }
+    return result;
+  }
 }
