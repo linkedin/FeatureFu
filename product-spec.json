@@ -1,7 +1,7 @@
 {
   "name": "featurefun",
   "group": "com.linkedin.@spec.name@",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "scmUrl": "git@gitli.corp.linkedin.com:FeatureFun/featurefun.git",
   "owners": [
     "litang"
