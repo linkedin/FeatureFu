@@ -3,8 +3,7 @@ apply plugin: 'idea'
 apply plugin: 'li-test'
 
 repositories {
-     mavenLocal()
-     maven { url "http://repo.maven.apache.org/maven2" }
+     mavenCentral()
 }
 dependencies {
      compile spec.external.testng
