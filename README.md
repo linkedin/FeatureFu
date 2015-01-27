@@ -8,19 +8,24 @@ regression or decision tree) into a feature, in an intuitive way without touchin
 Sample use cases:
 
 1. Feature normalization
+
     "(min 1 (max (+ (* slope x) intercept) 0))" : scale feature x with slope and intercept, and normalize to [0,1]
 
 2. Feature combination
+
    "(‐ (log2 (+ 5 impressions)) (log2 (+ 1 clicks)))" : combine #impression and #clicks into a smoothed CTR style feature
 
 3. Nonlinear featurization
+
    "(if (> query_doc_matches 0) 0 1)" : negation of a query/document matching feature
 
-4. cascading modeling
-   "(sigmoid (....))"  : convert a logistic regression model into a feature
+4. Cascading modeling
+
+   "(sigmoid (+ (+ (..) w1) w0))"  : convert a logistic regression model into a feature
 
 5. Model combination (e.g. combine decision tree and linear regression)
 
+    "(+ (* model1_score w1) (* model2_score w2))" : combine two model scores into one final score
 
 Expr: A super fast and simple evaluator for mathematical s-expressions written in Java.
 
