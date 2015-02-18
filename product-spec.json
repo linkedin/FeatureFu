@@ -1,7 +1,7 @@
 {
   "name": "featurefun",
   "group": "com.linkedin.@spec.name@",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scmUrl": "git@gitli.corp.linkedin.com:FeatureFun/featurefun.git",
   "owners": [
     "litang"
@@ -25,8 +25,7 @@
   },
   "review": {
     "wcTest": true
-  }
-,
+  },
   "topology": {
     "applications": {}
   },
@@ -44,4 +43,3 @@
   },
   "extSCM": {}
 }
-
