@@ -1,7 +1,7 @@
 {
   "name": "featurefun",
   "group": "com.linkedin.@spec.name@",
-  "version": "0.0.11",
+  "version": "0.1.0",
   "scmUrl": "git@gitli.corp.linkedin.com:FeatureFun/featurefun.git",
   "owners": [
     "litang"
@@ -17,23 +17,26 @@
     },
     "type": "gradle",
     "versions": {
-      "rum": "3.*.*",
-      "java": "1.6",
       "scala": "2.10.4",
-      "gradle": "2.1"
+      "java": "1.8",
+      "gradle": "2.1",
+      "rum": "3.*.*"
     }
   },
   "review": {
     "wcTest": true
+  }
+,
+  "topology": {
+    "applications": {}
   },
-  "deploy": {},
   "archive": {
     "artifacts": {},
     "repo_name": "SNA"
   },
   "dependencyResolution": {},
   "external": {
-    "testng": "org.testng:testng:6.4"
+    "testng": "org.testng:testng:6.8.8"
   },
   "product": {},
   "trunkDev": {
@@ -41,3 +44,4 @@
   },
   "extSCM": {}
 }
+
