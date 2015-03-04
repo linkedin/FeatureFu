@@ -1,0 +1,4 @@
+release_owners: [ tester ]
+groups: [ espresso-document-schema-approvers ]
+paths: [ '.*database/.*/.*\.avsc' ]
+description: "Espresso document schemas require DMRC approval. See go/DMRC for more information."
