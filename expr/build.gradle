@@ -9,4 +9,23 @@ dependencies {
      compile spec.external.testng
 }
 
+jar {
+     manifest {
+          attributes "Main-Class": "com.linkedin.featurefu.expr.Expression"
+     }
+
+     dependsOn configurations.runtime
+     from {
+          configurations.runtime.collect {
+               it.isDirectory() ? it : zipTree(it)
+          }
+     }
+             {
+                  exclude "META-INF/*.SF"
+                  exclude "META-INF/*.DSA"
+                  exclude "META-INF/*.RSA"
+                  exclude "META-INF/*.MF"
+             }
+}
+
 classification="library"
