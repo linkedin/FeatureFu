@@ -7,7 +7,7 @@
     "litang",
     "xmiao"
   ],
-  "comment": "",
+  "comment": "blur the boundary between model and feature",
   "description": "fun feature engineering projects",
   "watchers": [],
   "build": {
