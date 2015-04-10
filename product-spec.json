@@ -1,10 +1,11 @@
 {
-  "name": "featurefun",
+  "name": "featurefu",
   "group": "com.linkedin.@spec.name@",
   "version": "0.1.2",
-  "scmUrl": "git@gitli.corp.linkedin.com:FeatureFun/featurefun.git",
+  "scmUrl": "git@gitli.corp.linkedin.com:featurefu/featurefu.git",
   "owners": [
-    "litang"
+    "litang",
+    "xmiao"
   ],
   "comment": "",
   "description": "fun feature engineering projects",
@@ -17,10 +18,10 @@
     },
     "type": "gradle",
     "versions": {
-      "scala": "2.10.4",
+      "rum": "3.*.*",
       "java": "1.8",
-      "gradle": "2.1",
-      "rum": "3.*.*"
+      "scala": "2.10.4",
+      "gradle": "2.1"
     }
   },
   "review": {

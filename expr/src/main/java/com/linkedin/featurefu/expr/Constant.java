@@ -12,7 +12,7 @@
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  */
 
-package com.linkedin.featurefun.expr;
+package com.linkedin.featurefu.expr;
 
 /**
  * Constant just has a value in double type, as other numeric types can be converted to double (not verse visa)

@@ -12,7 +12,7 @@
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  */
 
-package com.linkedin.featurefun.expr;
+package com.linkedin.featurefu.expr;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

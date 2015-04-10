@@ -1,7 +1,7 @@
-FeatureFun
+FeatureFu
 ======
 
-FeatureFun contains a collection of library/tools for advanced feature engineering, such as using extended s-expression
+FeatureFu contains a collection of library/tools for advanced feature engineering, such as using extended s-expression
 based feature transformation, to derive features on top of other features, or convert a light weighted model (logistical
 regression or decision tree) into a feature, in an intuitive way without touching any code.
 
@@ -51,7 +51,7 @@ Using it is as simple as:
 ```
 
 ```command line
-$java -cp expr-1.0.jar com.linkedin.featurefun.expr.Expression "(+ 0.5 (* (/ 15 1000) (ln (- 55 12))))"
+$java -cp expr-1.0.jar Expression "(+ 0.5 (* (/ 15 1000) (ln (- 55 12))))"
 
 =(0.5+((15.0/1000.0)*ln((55.0-12.0))))
 =0.5564180017354035
@@ -75,7 +75,7 @@ tree
 expr is available under:
 
     <dependency>
-      <groupId>com.linkedin.featurefun</groupId>
+      <groupId>com.linkedin.featurefu</groupId>
       <artifactId>expr</artifactId>
       <version>0.0.8</version>
     </dependency>
@@ -83,5 +83,5 @@ expr is available under:
 ## Gradle
 
   dependencies {
-    compile "com.linkedin.featurefun:expr:0.0.8"
+    compile "com.linkedin.featurefu:expr:0.0.8"
   }
