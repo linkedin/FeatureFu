@@ -49,7 +49,7 @@ public abstract class Operator {
   /**
    * The symbol to be used in the expression String, such as + - * / ==
    *  We don't use reflection to reuse a operator's class name, as most math operators have characters cannot be used in java class name
-   * @return
+   * @return String representation of the operator
    */
   public abstract String getSymbol();
 
@@ -105,7 +105,7 @@ public abstract class Operator {
 
   /**
    * Display the operator by its symbiol
-   * @return
+   * @return  String representation of the operator
    */
   public String toString() {
     return this.getSymbol();

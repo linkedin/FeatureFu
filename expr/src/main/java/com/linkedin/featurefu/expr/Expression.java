@@ -38,7 +38,7 @@ public class Expression implements Expr {
 
   /**
    * Evaluate this expression given _operator and its _operands
-   * @return
+   * @return value evaluated
    */
   public double evaluate() {
     return this._operator.calculate(this._operands);
@@ -83,7 +83,7 @@ public class Expression implements Expr {
   /**
    * Wrapper for more generic use case, to support Atom and Expression
    * @param expr
-   * @return
+   * @return String as print friendly tree illustration of the s-expression
    */
   public static String prettyTree(Expr expr) {
     if (expr instanceof Atom) {
@@ -99,6 +99,7 @@ public class Expression implements Expr {
      *
    * @param prefix  Indent for this node
    * @param isTail  Is it the last operand
+   * @return String representation of the tree structure
    */
   private String prettyTree(String prefix, boolean isTail) {
     StringBuilder sb = new StringBuilder(prefix + (isTail ? "└── " : "├── ") + this._operator.getSymbol() + "\n");
