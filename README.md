@@ -1,9 +1,7 @@
 FeatureFu
 ======
 
-FeatureFu contains a collection of library/tools for advanced feature engineering, such as using extended s-expression
-based feature transformation, to derive features on top of other features, or convert a light weighted model (logistical
-regression or decision tree) into a feature, in an intuitive way without touching any code.
+FeatureFu[l] contains a collection of library/tools for advanced feature engineering, such as using extended s-expression based feature transformation, to derive features on top of other features, or convert a light weighted model (logistical regression or decision tree) into a feature, in an intuitive way without touching any code.
 
 Sample use cases:
 
@@ -77,11 +75,11 @@ expr is available under:
     <dependency>
       <groupId>com.linkedin.featurefu</groupId>
       <artifactId>expr</artifactId>
-      <version>0.0.8</version>
+      <version>0.0.3</version>
     </dependency>
 
 ## Gradle
 
   dependencies {
-    compile "com.linkedin.featurefu:expr:0.0.8"
+    compile "com.linkedin.featurefu:expr:0.0.3"
   }
