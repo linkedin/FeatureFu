@@ -48,7 +48,18 @@ Using it is as simple as:
         expression.evaluate();
 ```
 
-```command line
+
+## To Build
+  
+  gradle clean build
+
+##Test 
+ 
+ 
+```java
+
+cd build/expr/lib
+
 $java -cp expr-1.0.jar Expression "(+ 0.5 (* (/ 15 1000) (ln (- 55 12))))"
 
 =(0.5+((15.0/1000.0)*ln((55.0-12.0))))
@@ -66,7 +77,6 @@ tree
                 └── 12.0
 
 ```
-
 
 ## Maven
 

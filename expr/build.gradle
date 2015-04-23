@@ -1,12 +1,11 @@
-apply plugin: 'li-java'
+apply plugin: 'java'
 apply plugin: 'idea'
-apply plugin: 'li-test'
 
 repositories {
      mavenCentral()
 }
 dependencies {
-     compile spec.external.testng
+     compile "org.testng:testng:6.8.8"
 }
 
 jar {
@@ -27,5 +26,3 @@ jar {
                   exclude "META-INF/*.MF"
              }
 }
-
-classification="library"

@@ -1,10 +1,8 @@
-apply plugin: 'li-product'
-
 subprojects {
   plugins.withType(JavaPlugin) {
     dependencies {
       // dependency defined in product_spec.json
-      testCompile spec.external.testng
+      testCompile "org.testng:testng:6.8.8"
     }
 
     test {
