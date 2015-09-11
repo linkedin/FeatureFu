@@ -24,8 +24,10 @@ Using it is as simple as:
         expression.evaluate();
 ```
 
-```command line
-$java -cp expr-1.0.jar Expression "(+ 0.5 (* (/ 15 1000) (ln (- 55 12))))"
+and then from the command line:
+
+```shell
+$ java -cp expr-1.0.jar Expression "(+ 0.5 (* (/ 15 1000) (ln (- 55 12))))"
 
 =(0.5+((15.0/1000.0)*ln((55.0-12.0))))
 =0.5564180017354035
@@ -40,9 +42,7 @@ tree
             └── -
                 ├── 55.0
                 └── 12.0
-
 ```
-
 
 ## Maven
 
@@ -53,4 +53,3 @@ expr is available under:
       <artifactId>expr</artifactId>
       <version>0.0.3</version>
     </dependency>
-
