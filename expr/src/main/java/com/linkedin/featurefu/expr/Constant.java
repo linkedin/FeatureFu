@@ -15,7 +15,7 @@
 package com.linkedin.featurefu.expr;
 
 /**
- * Constant just has a value in double type, as other numeric types can be converted to double (not verse visa)
+ * Constant just has a value in double type, as other numeric types can be converted to double (not vice versa)
  *
  *  Author: Leo Tang <http://www.linkedin.com/in/lijuntang>
  */
