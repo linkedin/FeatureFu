@@ -27,7 +27,7 @@ import java.util.regex.Pattern;
  * Example:
  *      tokenize('(a b (c d)) e f (g)') returns ['(a b (c d))', 'e', 'f', '(g)']
  *      tokenize('(x y z)') returns ['(x y z)']
- * clients are supposed to call tokenize() many times to fully parse an complex expression
+ * clients are supposed to call tokenize() many times to fully parse a complex expression
  * ported and modified from python code:
  *  http://www.nltk.org/_modules/nltk/tokenize/sexpr.html
  *

@@ -20,7 +20,7 @@ package com.linkedin.featurefu.expr;
  *                            \      \__->  Variable
  *                              \_->Expression
  *
- * Atom has a value, possibly a name (if it's variable), expression has a operator, and one or more operands
+ * Atom has a value, possibly a name (if it's variable), expression has an operator, and one or more operands
  *
  *  Author: Leo Tang <http://www.linkedin.com/in/lijuntang>
  * */

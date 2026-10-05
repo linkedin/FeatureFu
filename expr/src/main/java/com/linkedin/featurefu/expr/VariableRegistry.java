@@ -45,7 +45,7 @@ public class VariableRegistry extends ConcurrentHashMap<String, Variable> {
   }
 
   /**
-   * Register variable by name, try find it first, if not found, create new one and register
+   * Register variable by name, try to find it first, if not found, create new one and register
    *
    * @param name variable name
    * @return variable object found or created
